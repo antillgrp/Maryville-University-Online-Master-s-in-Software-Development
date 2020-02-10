@@ -1,0 +1,14 @@
+Module 3 Canvas Submission
+
+1. How many hours do you estimate you used completing this assignment?
+	
+	My House --> 12 hours
+	Gradient Bars --> 5 hours
+
+2. What was easiest for you when completing this assignment?
+	
+	Colors and shapes with graphics.py
+
+3. What was the most difficult challenge you experienced when completing this assignment?
+
+	Animation moving shapes, graphics.py is based on Tkinter which is not totally  threading friendly. Was not able to get a non blocking thread forking animation.

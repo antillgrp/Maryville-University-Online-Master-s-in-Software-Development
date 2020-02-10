@@ -1,0 +1,12 @@
+1. How many hours do you estimate you used completing this assignment?
+
+3-4 hs
+
+2. What was easiest for you when completing this assignment?
+
+Understanding the problems
+
+3. What was the most difficult challenge you experienced when completing this assignment?
+
+Creating a reusable utility library with functions that validate and convert the inputted numeric data. It can be used
+with many other future problems solutions.

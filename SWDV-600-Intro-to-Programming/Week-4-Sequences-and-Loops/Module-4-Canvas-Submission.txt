@@ -1,0 +1,13 @@
+How many hours do you estimate you used completing this assignment?
+
+mad-libber.py -> 2 - 3 h
+sales-totaler.py -> 2 - 3 h
+
+What was easiest for you when completing this assignment?
+
+string and file operations
+
+What was the most difficult challenge you experienced when completing this assignment?
+
+I mixed string and file operations with some functional programing in python getting the same results
+in a more declarative (vs imperative, loops etc.) way.

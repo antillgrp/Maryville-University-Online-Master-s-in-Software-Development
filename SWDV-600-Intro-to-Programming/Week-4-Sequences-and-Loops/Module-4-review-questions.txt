@@ -1,0 +1,235 @@
+Module 4 review questions
+
+4.1 Introducing Sequences
+
+1. T or F: A sequence is an ordered set of items.
+
+T
+
+2. The location of an item in a sequence is called its _index_ .
+
+3. The index of the first item in a sequence is the value _0_ .
+
+4. What is an "out of range error" and why does it occur?
+
+When it's being used and index that is not inside the limits ex. seq[len(seq)]
+
+5. Write a program call seq-multiplier which will print out numbers in a sequence multiplied by a number input by a user.
+Your program should store the sequence [52, 1, 34, 23, 18, -9, 21, 4, 79] in a variable, then have the user input a number,
+and finally, print out all numbers in the sequence multiplied by the user's input. Here is an example interaction:
+
+Enter your multiplier: 2
+The products are:
+104
+2
+68
+46
+36
+-18
+42
+8
+158
+
+seq = [52, 1, 34, 23, 18, -9, 21, 4, 79]
+mult = int(input("Enter your multiplier:"))
+print("The products are:")
+for index in range(len(seq)):
+    print(seq[index] * mult)
+
+4.2 Sequence Operators
+
+1. In the expression [12, 21] + [52, 12], the `+` is the _concatenation_ operator.
+
+2. In the expression [12, 21] * 5, the `*` is the _repetition_ operator.
+
+3. In the expression sequenceOfItems[2:3], the `:` is the _slicing_ operator.
+
+4. How will Python interpret the expression [12, 21] + 32?
+
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+TypeError: can only concatenate list (not "int") to list
+
+5. What is the difference between an inclusive bound and an exclusive bound when slicing sequences?
+
+inclusive bound --> the element with that index is included in the slice
+exclusive bound --> the element with that index is NOT included in the slice
+
+4.3 Strings as Sequences of Characters
+
+1. Strings are objects stored as a _sequence_ of characters.
+
+2. What does the expression len( "plumbus" ) evaluate to?
+
+7
+
+3. How many characters are in the String "This party has like 5 types of nachos!"? (HINT: it's more than 29)
+
+38
+
+4. Modify the username-generator program from the video demonstration by making user names that start with the first
+five letters of a person's last name, followed by the first two letters of their first name. For example, Paul Gross
+would have the user name grosspa.
+
+firstN = input("Enter your first name: ")
+lastN = input("Enter your last name: ")
+print("The user name will be: ",((lastN[0:5] if len(lastN) >= 5 else lastN) + firstN[0:2]).lower())
+
+4.4 String Representation
+
+1. What is the ordinal value that represents the character 'q'?
+
+ord('q') --> 113
+
+2. Do the letters 'q' and 'Q' have the same ordinal value?
+
+ord('q') --> 113
+ord('Q') --> 81
+
+3. What character is represented by the ordinal value 42?
+
+chr(42) -> '*'
+
+4. Consider the expression `print("Fuzzy fuzzy cute cute")`. What character will the print function concatenate onto the
+String when printing? How would you change the character that is appended?
+
+What character will the print function concatenate --> "\n"
+How would you change the character --> print(whatsoever, end=" ")
+
+5. When we want to iterate through the items in sequence, why might we choose a "for in" loop rather than a "for" loop
+using the range function?
+
+The "for in" loop does all of the work of figuring out the length of the sequence, using the index, and getting the
+item. All of this is done in a single loop for use.
+
+6. Write a program that allows a user to type in two numbers, a lower bound and an upper bound, then prints all characters represented by the numbers between those bounds. Here is an example interaction:
+
+Enter the lower ordinal bound: 60
+Enter the upper ordinal bound: 70
+The characters from 60 to 70 are:
+< = > ? @ A B C D E
+
+loBound = input("Enter the lower ordinal bound: ")
+upBound = input("Enter the upper ordinal bound: ")
+print("The characters from 60 to 70 are:")
+for char in range(60, 70):
+    print(chr(char), end= " " if char != 69 else "\n")
+
+4.5 Splitting Strings into Sequences
+
+1. When using the split method, the character on which to split the String is called the _delimiter_ .
+
+2. What does the expression "WORST. EPISODE. EVER.".split(" ") evaluate to?
+
+['WORST.', 'EPISODE.', 'EVER.']
+
+3. What does the expression "WORST. EPISODE. EVER.".split(".") evaluate to?
+
+['WORST', ' EPISODE', ' EVER', '']
+
+4. What does the expression "WORST. EPISODE. EVER.".split("e") evaluate to?
+
+['WORST. EPISODE. EVER.']
+
+5. The items in the sequence that results from evaluating an expression using the split method are called _tokens_ .***
+
+6. What sequence operator can we use to accumulate characters into a String value stored in an accumulation variable?
+
+concatenation
+
+4.6 Manipulating Strings with Other String Methods
+
+1. Given the String "BaNaNa", what expression would method could we call to make a new String with the same letters but
+all lower case?
+
+"BaNaNa".lower()
+
+2. What will the expression " What is my purpose?\nYou pass butter.   ".strip() evaluate to?
+
+'What is my purpose?\nYou pass butter.'
+
+3. Given the sequence ["It was nineteen dickety-two", "we said dickety", "because the kaiser", "stole our word for twenty."]
+what expression would create a single String that, when printed, would look like this:
+
+It was nineteen dickety-two,
+we said dickety,
+because the kaiser,
+stole our word for twenty.
+
+print("\n".join(["It was nineteen dickety-two", "we said dickety", "because the kaiser", "stole our word for twenty."]))
+
+4. When joining items in a sequence of Strings, the character or characters be inserted between the items is called
+the _delimiter_.
+
+5. Write a program that has a user input a string of three numbers separated by commas, such as "32, 13, 15", and prints
+the sum of the numbers. For example
+
+Enter your three numbers separated by commas: 32, 13, 15
+The sum is 60
+
+print("The sum is", eval('+'.join(input("Enter your three numbers separated by commas:").split(','))))
+
+4.7 String Formatting
+
+1. What will the expression "There's always money in the {0} {1}.".format("banana", "stand") evaluate to?
+
+"There's always money in the banana stand."
+
+2. What will the expression "There's always money in the {1} {0}.".format("banana", "stand") evaluate to?
+
+"There's always money in the stand banana."
+
+3. What will the expression "We need {:05.2f} gigawatts!".format( 1.213589793 ) evaluate to?
+
+'We need 01.21 gigawatts!'
+
+4. Write a program called grade-pct where a user enters a student's name, the total points for an assignment and the points the student earned on the assignment. The program then should output a message with the student's name and the percentage of points earned to two decimal places. For example:
+
+Enter the student's name: Sam
+Enter how many points possible for the assignment: 21
+Enter how many points earned for the assignment: 19
+Sam's percentage score is 90.48%.
+
+print("{}'s percentage score is {:05.2f}%".format(
+    input("Enter the student's name: "),
+    eval("100 / " + input("Enter how many points possible for the assignment: ") + " * " + input("Enter how many points earned for the assignment: "))
+))
+
+4.8 File Input and Output
+
+1. Before reading from or writing to a file, we first must _open_ the file.
+
+2. If we wanted to write data to file, but not overwrite what is already in the file, we would use the _append "a"_ mode.
+
+3. If we want to open a file in our program just using the file's name, where must the file be located relative to our Python program?
+
+Same folder
+
+4. What is the difference between using the read method to get the contents of a file and the readlines method?
+
+read -> single string with the content of the whole file
+readlines -> string sequence in which each element is the corresponding line from the file
+
+4.9 File Processing
+
+1. The readlines method leaves what whitespace character on the end of each string in the sequence it returns?
+
+"\n"
+
+2. Modify the program from this video to read the names from the file if the names are no longer only separate lines,
+but instead are all separated by commas and on different lines. You can use this file as an example: users-csv.txt.
+Preview the document The contents look like this:
+
+Earl Anthony, Pete Weber, Mark Roth, Mike Aulby, Norm Duke
+Tori Romeo, Jeri Edwards, Lynda Barnes, Nikki Gianulias, Cara Honeychurch
+
+inputFilename = input ("Enter the name of the file with the names: ")
+outputFilename = input ("Enter the name of the output file: ")
+inputFile = open (inputFilename, "r")
+outputFile = open (outputFilename, "w")
+
+# "a b, c d\ne f, g h".replace("\n", ",").replace(", ", ",").split(",") --> ['a b', 'c d', 'e f', 'g h']
+
+names = inputFile.read().replace("\n", ",").replace(", ", ",").split(",")
+
+...
