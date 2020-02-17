@@ -1,0 +1,311 @@
+Module 6 review questions
+
+6.1 Objects Review
+
+1. The idea that we need not be concerned with how an object does something, only that it can do things, is called _________.
+
+2. A special function that creates a new object, or instance of a class, is called a(n) _________.
+
+3. _________ variables are used to store data inside an object.
+
+4. A(n) _________ method changes the data stored in an object.
+
+5. Functions declared inside a class are called _________.
+
+6 ._________ methods return values taken or computed from the state of an object.
+
+6.2 Defining Classes
+
+1. When considering the design of a class, we think about the ______________ an instance of the class must store and the ______________ an instance of the class can do.
+
+2. The constructor method of a class is named ______________ . (hint: don't forget the underscores)
+
+3. By convention, methods in our classes always have at least one special parameter named _________________ that is assigned a ____________ to the location in memory of the calling object.
+
+4, Consider the design of a Class meant to represent a Television. Identify three instance variables we could use to store the state of the television (e.g., volume level) and three actions a Television object should be able to do (e.g., turn volume up )
+
+5. Consider the following class program, what will it output?
+
+class Kanga:
+    def __init__( self, n ):
+        self.n = n + 1
+
+    def roo( self, x ):
+        print( self.n + x )
+        return 2 * x
+
+    def setN( self, n ):
+        self.n = n
+
+    def getN( self ):
+        return self.n
+
+def main():
+    kanga1 = Kanga( 2 )
+    kanga2 = kanga1
+    roober = kanga2.roo( 4 )
+
+    kanga1.setN( roober )
+    kanga2.roo( 4 )
+    kanga1.roo( 4 )
+
+main()
+
+6. Write a class to represent spheres. Your class should implement the following methods (Hint: Equations for spheres = (LaTeX: V\:=\:\frac{4}{3}\Pi r^3\:\:\:A\:=\:4\Pi r^2 V = 4 3 Π r 3 A = 4 Π r 2 ):
+
+__init__( self, radius )
+
+getRadius( self )
+
+surfaceArea( self )
+
+volume( self )
+
+7. Write a class named Email that should have four instance variables: sender (a String of the sender's email address), recipient (A String of the receiver's email address), priority (a value from 1 to 3, with three 3 indicating highest priority), and message (the text of the email). The Email class should also include a method to print the message out called printOut. Then create an instance of your Email class and call the printOut function on it to verify it prints as you expect. For example, given this object:
+
+testEmailObject = Email("sender@them.com","you@recipient.com", 3, "Who is Keyser Soze?")
+
+assigned to the variable `testEmailObject`, then calling the `printOut` method on the object referred to by the `testEmailObject` variable like this:
+
+testEmailObject.printOut()
+
+should output the following, exactly like this:
+
+TO: you@recipient.com
+FROM: sender@them.com
+Priority: 3
+Who is Keyser Soze?
+
+6.3 Data Processing with Classes
+
+1. When a variable stores no value or no reference to an object, then its value is ____________ .
+
+2. What happens when we attempt to access a property or method on a variable that is storing the value `None`?
+
+3. Using the candy-data.txtPreview the document file, write a program that finds the chocolate candy with the lowest sugar percentile. Your program should parse each line of the file into a Candy object. Feel free to build your program from the candy_processor.pyPreview the document completed in the video.
+
+4. Feel free to watch the Joy of Painting below. https://youtu.be/kasGRkfkiPM
+
+Ross, B. (2015, March 20). Bob Ross - Mountain Summit (Season 13 Episode 10) [Video file]. Retrieved from Bob Ross - Mountain Summit (Season 13 Episode 10). (Links to an external site.)
+
+538 compiled all painting elements (Links to an external site.) present in each episode. A selection of those elements can be found in bob-ross-elements.csvPreview the document. The file lists episode numbers and titles, then indicate if the painting for that episode included a Beach, a Cliff, and/or a Tree (whether it was happy or little is not given).
+
+Write a program that reads this file and outputs all episodes that include both a Beach and a Cliff. Additionally, you should read each line of the file (except the first line, which is a header) into an object and then use that object to determine if it represents an episode where a beach and a cliff were painted. You class should include instance variables for each data element (i.e., each column in the file) for each episode. For example, there should be an instance variables for the episode number, episode title, and so on.
+
+6.4 Encapsulation with Modules
+
+1. When naming a module, we cannot use a ____________ character because on import it would be interpreted as subtraction.
+
+2. When we provide a name for something that has multiple words, and the first word is lowercase with each following starting with an uppercase letter (e.g., somethingLikeThis), this is called ___________.
+
+3. In our classes, we can write ___________ to help other programmers understand what our classes are for and how to use them.
+
+4. Assuming the math module is already imported, write an expression that will get and print the doc information for the `sqrt` function of the math module.
+
+5. Below is a class for a GroceryItem. Add documentation to the class such that if we called `help(grocery_item)` it would provide help messages for the module, the class, and the methods in the class including `__init__`. You can use this grocery_item.pyPreview the document file as a starting point.
+
+class GroceryItem:
+    def __init__( self, id, name, price ):
+        self.id = id
+        self.name = name
+        self.price = price
+
+    def priceForNItems( self, numOfItems ):
+        return self.price * numOfItems
+
+    def updateId( self, newId ):
+        self.id = newId
+
+    def getName( self ):
+        return name
+
+6.5 Structuring Data with Collections
+
+1. A list collection orders its contents by numeric ___________ .
+
+2. A dictionary collection indexes its contents by ____________ .
+
+3. You're playing a guessing game with a friend. They choose a number from 1 to 100. With each guess, they will tell if their number is higher or lower. Can you come up with an algorithm for making your guesses such that you always get the answer within 20 guesses? How about 7 guesses? [NOTE: This is more of a thinking exercise in terms of how you structure the data in your head when thinking about this problem, you won't be quizzed on it.]
+
+6.6 List Operations and Methods
+
+For the following problems, assume you have the following list:
+
+reviewList = ['gumball', 'darwin', 'anais', 'penny', 'gumball', 'nicole']
+
+1. Predict what the following expressions would evaluate to, or any errors they would cause, then check your answer in Python:
+
+    'penny' in reviewList
+
+    'anton' in reviewList
+
+    reviewList.pop( 2 )
+
+    reviewList.pop( 6 )
+
+    reviewList.index( 'jerry' )
+
+    reviewList.index('nicole')
+
+    reviewList.count('gumball')
+
+    reviewList.count('rick')
+
+2. Predict the value of reviewList after each of the following method calls, or any errors that would occur, then check your answer in Python. NOTE: You should assume not these are successive, assume they are independent and called on a clean version of reviewList each time.
+
+    reviewList.append('tobias')
+
+    reviewList.remove('anton')
+
+    reviewList.remove('darwin')
+
+    reviewList.insert( 1, 'morty' )
+
+    reviewList.insert( 10, 'morty' )
+
+    reviewList.reverse()
+
+    reviewList.sort()
+
+3. Given the list
+
+reviewList = ['tina', 'bob', 'gene', 'louise', 'gene', 'linda']
+
+Write an expression that would:
+
+    insert 'teddy' after 'louise'
+    remove 'linda'
+    get the index for 'bob', and then remove 'bob' using that index
+    count the occurrences of 'gene'
+
+
+
+4. Write a program where a user inputs their grocery list, one item and at a time, until they enter 'quit', and then it writes the list out to a file named 'grocery-list.txt' which has the grocery items in alphabetical order. For example:
+
+Enter your next item (q to quit): popcorn
+Enter your next item (q to quit): carrots
+Enter your next item (q to quit): lettuce
+Enter your next item (q to quit): broccoli
+Enter your next item (q to quit): q
+
+List written to grocery-list.txt
+
+The contents of `grocery-list.txt` would be:
+
+broccoli
+carrots
+lettuce
+popcorn
+
+6.7 Lists of Objects
+
+For the following problems, consider this class:
+
+class SpecialBurger:
+    def __init__( self, name, price ):
+        self.name = name
+        self.price = price
+
+    def getName( self ):
+        return self.name
+
+    def getPrice( self ):
+        return self.price
+
+and the following list:
+
+burgersList = [ SpecialBurger( 'Salvador Cauliflower Burger', 5.95), SpecialBurger( 'Chevre Which Way Burger', 6.95), SpecialBurger('Thank God it\'s Fried Egg Burger', 5.55)]
+
+1. Write a code segment that would create your own SpecialBurger object and add it to the `burgersList`.
+
+2. Add a method to the SpecialBurger class that would enable printing out a Special Burger object with the name followed by the price, like this:
+
+Chevre Which Way Burger for $6.95
+
+3. Write an expression that would sort the `burgerList` by the names of the SpecialBurgers.
+
+4. Write an expression that would sort the `burgerList` by the prices of the SpecialBurgers.
+
+6.8 Using Lists in Classes
+
+1. Consider the double_die_roller.pyPreview the document from our together project. Modify the program such that instead of two DieViews it has five DieViews stored in a list. Further, when the `Roll` button is clicked it should roll all five die by using a loop to iterate through all the DieViews and calling the roll method.
+
+You will need the following files to test it: msdie.pyPreview the document, graphics.pyPreview the document, die_view.pyPreview the document, button.pyPreview the document
+
+2. Write a function called getMonth that takes one parameter, an integer from 1 to 12 that corresponds to a month of the year, and returns the name of the month. For example, calling `getMonth( 1 )` should return the String 'January'. You should implement this function using a lookup table: define a list in the function that enables you to look up the month's name using the parameter value as part of the index.
+
+3. Consider the following Class:
+
+class GroceryItem:
+    def __init__( self, name, price):
+        self.name = name
+        self.price = price
+
+    def getName( self ):
+        return self.name
+
+    def getPrice( self ):
+        return self.price
+
+Write another class called ShoppingCart which has an instance variable for a list of items in the shopping cart. The class should have two methods:
+
+    addItem which should accept a GroceryItem object as an argument and add that object to the list of items in the cart
+    getCartTotal which should return the total cost of all the items in the cart (i.e., the sum of the prices of all the items in the cart's list of items)
+
+6.9 Dictionary Operations
+
+For the following problems, assume you have this dictionary:
+
+reviewDict = {'Professor Plum': 'Rope', 'Mrs. Peacock': 'Candlestick', 'Colonel Mustard':'Knife'}
+
+1. Predict what the following expressions would evaluate to, or any errors they would cause, then check your answer in Python:
+
+    reviewDict['Mrs. Peacock']
+
+    reviewDict['Mr. Green']
+
+    reviewDict.get('Colonel Mustard', 'Gun')
+
+    reviewDict.get('Miss Scarlett', 'Gun')
+
+    'Prof. Plum' in reviewDict
+
+    list( reviewDict.keys() )
+
+    list( reviewDict.values() )
+
+2. Predict the value of reviewDict after each of the following statements, or any errors that would occur, then check your answer in Python. NOTE: you should assume not these are successive, assume they are independent and called on a clean version of reviewDict each time.
+
+    reviewDict['Mr. Green'] = 'Gun'
+
+    reviewDict['Colonel Mustard'] = 'Poison'
+
+    del reviewDict['Professor Plum']
+
+    reviewDict['Colonel Mustard'] = reviewDict['Colonel Mustard'] + 'y'
+
+3. Write a function named `getMonthName` that accepts one parameter: the abbreviation of a month's name (e.g., 'Feb') and returns the full name of the month (e.g., 'February'). Your solution should use a dictionary that maps from month name abbreviations to full month names.
+
+6.10 Using Dictionaries
+
+1. Predict the output of the following code segment, then check yourself in Python.
+
+d = {}
+d['apple'] = 3
+for i in range( d['apple']):
+    d['banana'] = d.get('banana', 10) + 5
+print( d )
+
+2. Predict the output of the following code segment, then check yourself in Python.
+
+d = {}
+d['apple'] = ['gala', 'fuji']
+for i in range( len(d['apple'] )):
+    foo = d.get('banana', [])
+    foo.append('phone')
+    d['banana'] = foo
+print( d )
+
+
+
+
