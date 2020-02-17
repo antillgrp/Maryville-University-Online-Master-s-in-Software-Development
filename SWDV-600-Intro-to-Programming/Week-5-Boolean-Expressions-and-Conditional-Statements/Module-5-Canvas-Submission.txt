@@ -1,0 +1,12 @@
+How many hours do you estimate you used completing this assignment?
+
+golf-helper -> 2 h
+sales-invoice-finder -> 2h
+
+What was easiest for you when completing this assignment?
+
+golf-helper
+
+What was the most difficult challenge you experienced when completing this assignment?
+
+No difficult challenge this time.

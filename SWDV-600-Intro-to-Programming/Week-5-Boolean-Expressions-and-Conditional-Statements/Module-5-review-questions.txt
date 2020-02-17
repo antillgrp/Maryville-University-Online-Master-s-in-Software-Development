@@ -192,17 +192,34 @@ print( "The character is", character )
 Give an example set of inputs that would cause this program to throw an exception.
 
 inputString = music
-characterIndex = len(inputStrin) 
+characterIndex = len(inputString)
 
 3. Rewrite the previous program such that it will `try` and `except` an IndexError, then have the program print out "The string does not have that many characters" if an IndexError occurs.
 
+inputString = input("Enter your String: ")
+characterIndex = int(input("Enter the index of the character you want: "))
+try:
+    character = inputString[characterIndex]
+    print("The character is", character)
+except IndexError as ie:
+    print("The string does not have that many characters: ", e)
+
 4. Rewrite the previous program again, but this time prevent the error from ever occurring by using conditional execution (i.e., if/else statement). The program should still print out "The string does not have that many characters" if the Exception would have occurred given the input values for `inputString` and `characterIndex`.
+
+inputString = input("Enter your String: ")
+characterIndex = int(input("Enter the index of the character you want: "))
+if -1*len(characterIndex) <= characterIndex < len(characterIndex):
+    character = inputString[characterIndex]
+    print("The character is", character)
+else:
+    print("The string does not have that many characters: ")
+
 
 5.6 Definite and Indefinite Loops
 
-1. A for loop iterating over a sequence is an example of a ______________ loop.
+1. A for loop iterating over a sequence is an example of a _definite_ loop.
 
-2. An infinite loop occurs when the loop's condition, or continuation test, never evaluates to be ____________ .
+2. An infinite loop occurs when the loop's condition, or continuation test, never evaluates to be _false_ .
 
 3. Consider the following loops. How many times will each repeat? Recall that `infinitely` or `unknowable` are possible answers.
 
@@ -211,21 +228,29 @@ while n < 10:
     print('I\'m looping!')
     n = n * 2
 
+A. 4
+
 x = 5
 while x > 1:
     print('I\'m hula-hooping!')
     x = x + 1
+
+A. infinitely
 
 z = 10
 while z < 10:
     print('I\'m swooping!')
     z = z - 1
 
+A. 0
+
 y = 0
 doAnother = 'y'
 while doAnother == 'y':
     y += 10
     doAnother = input('Do another (y/n)? ')
+
+A. unknowable
 
 5.7 Sentinel Loops
 
@@ -240,29 +265,78 @@ print("You entered {0} words with less than 5 characters".format(count))
 
 2. How would you fix the previous program to make it output the correct result?
 
+count = 0
+####vvvHEREvvv####
+inputWord = input("Enter a word ('quit' to stop): ")
+
+while inputWord != 'quit':
+    if len( inputWord ) < 5:
+        count = count + 1
+    ####vvvHEREvvv####
+    inputWord = input("Enter a word ('quit' to stop): ")
+print("You entered {0} words with less than 5 characters".format(count))
+
 3. How would you improve the previous program such that a user could enter the word `quit` in any case (e.g., `QuiT`) to stop the input?
 
-4. A special value that causes a loop to terminate is called a ________ value.
+while inputWord.lower() != 'quit':
+
+4. A special value that causes a loop to terminate is called a _sentinel_ value.
 
 5. Write a program called min-max-tracker that enables a user to enter positive numbers until they enter a negative value. After the user enters the negative value the program should output both the minimum positive value entered and the maximum positive value entered.
 
+min=math.infiny
+max=math.infiny × -1
+next=input("next(< 0 stops):" )
+while next >= 0:
+    min= math.min(min,next)
+    max=math.max(max,next)
+    next=input("next(< 0 stops):" )
+print("Min:{}, Max:{}".format(min,max))
+
 5.8 Validation Loops
 
-1. The _________ statement will terminate an executing loop even if the loop's condition, or continuation test, is still evaluating to true.
+1. The _break_ statement will terminate an executing loop even if the loop's condition, or continuation test, is still evaluating to true.
 
 2. Write a program that takes as input a student's total course points (a value between 0 and 100) and prints out if they passed the course (total points of 60 or better), if they passed with honors (total points of 90 or better), or if they need to retake the course (total points below 60).
 
+points = int(input("total course points:"))
+
+if 0 < points > 100:
+	print("invalid")
+elif points >= 90:
+	print("honors")
+elif points >= 60:
+	print("pased")
+else:
+	print("retake")
+
 If the total points value input by the user is not valid (i.e., points value is more than 100), then the program should repeatedly ask the user to enter a points value until a valid value is entered. You can assume the user will only input points values greater than 0.
 
-3. Write a program that enables a user to input Strings at least 5 characters long and counts the number of Strings entered that start and end with the same character. For example "baabab" would count but "ababb" would not.
+points = int(input("total course points:"))
 
-If a user enters a String that is shorter than 5 characters, then the user should receive an error message and be prompted to enter another string at least 5 characters long. If a shorter, invalid string has the same first and last character, (e.g., "abba") that should not be counted.
+while 0 < points > 100:
+	points = int(input("Not valid, tray again total course points:"))
+if points >= 90:
+	print("honors")
+elif points >= 60:
+	print("pased")
+else:
+	print("retake")
+
+3. Write a program that enables a user to input Strings at least 5 characters long and counts the number of Strings entered that start and end with the same character. For example "baabab" would count but "ababb" would not. If a user enters a String that is shorter than 5 characters, then the user should receive an error message and be prompted to enter another string at least 5 characters long. If a shorter, invalid string has the same first and last character, (e.g., "abba") that should not be counted.
+
+while True:
+    string = input("Enter string (at least 5 chars long):")
+    if len(string) >= 5:
+        print("does not" if string[0] != string[-1] else "it does", "star and end with the same character"
+        break
+    print("at least 5 chars long, tray again")
 
 5.9 File Loops
 
-1. When reading a file and we reach the end, the _______________ function will return the _______________ .
+1. When reading a file and we reach the end, the _ file.readline()__ function will return the _empty string_ .
 
-2. A CSV file is actually called a ___________  _______________  _______________ file.
+2. A CSV file is actually called a _comma separated value_ file.
 
 3. The following program is intended to count all the lines that have more than two values separated by commas, but it has a problem. What is the problem and how would you fix it?
 
@@ -276,7 +350,27 @@ while line != "":
 print("Line Count: {0}".format( lineCount ) )
 file.close()
 
-4. The data file forum_posters.csvPreview the document contains information about people's participation in an online forum. The first column is their name, second is their status (A is active in the last week, X is not active), and last is how many posts they have made in the last month. We want to find our most active posters. Write a program that will find all posters in this file that are (1) active and (2) have more than 200 posts. You should print out the details of every person meeting the criteria.
+file = open("scores.csv", "r")
+line = file.readline()
+lineCount = 0
+while line != "":
+    tokens = line.split(",")
+    if len(tokens) >= 3:
+        lineCount = lineCount + 1
+    line = file.readline()                            # <-- was missing
+print("Line Count: {0}".format( lineCount ) )
+file.close()
+
+4. The data file forum_posters.csv Preview the document contains information about people's participation in an online forum. The first column is their name, second is their status (A is active in the last week, X is not active), and last is how many posts they have made in the last month. We want to find our most active posters. Write a program that will find all posters in this file that are (1) active and (2) have more than 200 posts. You should print out the details of every person meeting the criteria.
+
+file = open("forum_posters.csv", "r")
+line = file.readline()
+while line != "":
+    row = line.split(",")
+    if len(row) == 3 and row[1] == "A" and int(row[2]) >200 :
+    print("Poster: {0}, currently active, is one of the most active posters with {2}".format(*row))
+    line = file.readline()
+file.close()
 
 5.10 Boolean Operators for Complex Conditions
 
@@ -289,26 +383,35 @@ b = False
 
 What do the following expressions evaluate to?
 
-    not b
+    not b --> True
 
-    b or True
+    b or True --> True
 
-    x > y and y > z
+    x > y and y > z  --> False
 
-    x == y or x <= z
+    x == y or x <= z --> True
 
-    not (x % 2 == 0)
+    not (x % 2 == 0) -->  True
 
-    b and not b
+    b and not b --> False
 
-    b or not b
+    b or not b --> True
 
-    (x < y) == b
+    (x < y) == b --> True
 
 2. Your blood pressure is normal if the systolic is between 80 and 120 and the diastolic is between 60 and 80. Write a program where a user inputs their systolic and diastolic blood pressure readings and the program tells them if their blood pressure is normal or not normal. Attempt to do this using boolean operators rather than nested if statements.
+
+systolic = float(input("Enter systolic: "))
+diastolic = float(input("Enter diastolic: "))
+print("Your blood pressure is: ", "normal" if 80 <= systolic <= 120 and 60 <= diastolic <= 80 else "not normal, please go see a doctor")
+
 
 3. Write a program that enables a user to enter in three numbers and then tells the user if the numbers are consecutive. For example, if the user inputs 5, 6, and then 7, these are consecutive so the program should indicate as such. However, if the user inputs 4, 6, and then 7, these are not consecutive and the program should say so. HINT: think about using the absolute value function
 
 4. Revisit the previous problem, and make your consecutive test work for numbers input in any order. For example, the input 6, 7, and then 5 should cause the program to report the numbers are consecutive because there exists some ordering of the numbers in which they are consecutive.
 
+absN1 = abs(int(input("number 1: ")))
+absN2 = abs(int(input("number 2: ")))
+absN3 = abs(int(input("number 3: ")))
 
+print("consecutive" if absN1 - absN2 - absN3 == 0 or absN2 - absN1 - absN3 == 0 or absN3 - absN2 - absN1 == 0 else "not consecutive")
