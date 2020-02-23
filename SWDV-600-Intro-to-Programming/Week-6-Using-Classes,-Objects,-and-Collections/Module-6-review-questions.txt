@@ -2,27 +2,30 @@ Module 6 review questions
 
 6.1 Objects Review
 
-1. The idea that we need not be concerned with how an object does something, only that it can do things, is called _________.
+1. The idea that we need not be concerned with how an object does something, only that it can do things, is called _encapsulation_.
 
-2. A special function that creates a new object, or instance of a class, is called a(n) _________.
+2. A special function that creates a new object, or instance of a class, is called a(n) constructor_.
 
-3. _________ variables are used to store data inside an object.
+3. _Instance_ variables are used to store data inside an object.
 
-4. A(n) _________ method changes the data stored in an object.
+4. A(n) _mutator_ method changes the data stored in an object.
 
-5. Functions declared inside a class are called _________.
+5. Functions declared inside a class are called _ methods _.
 
-6 ._________ methods return values taken or computed from the state of an object.
+6 ._Accessors_ methods return values taken or computed from the state of an object.
 
 6.2 Defining Classes
 
-1. When considering the design of a class, we think about the ______________ an instance of the class must store and the ______________ an instance of the class can do.
+1. When considering the design of a class, we think about the _ data _ an instance of the class must store and the _ actions _ an instance of the class can do.
 
-2. The constructor method of a class is named ______________ . (hint: don't forget the underscores)
+2. The constructor method of a class is named ( __init__ ) . (hint: don't forget the underscores)
 
-3. By convention, methods in our classes always have at least one special parameter named _________________ that is assigned a ____________ to the location in memory of the calling object.
+3. By convention, methods in our classes always have at least one special parameter named _ self _ that is assigned a _ reference _ to the location in memory of the calling object.
 
 4, Consider the design of a Class meant to represent a Television. Identify three instance variables we could use to store the state of the television (e.g., volume level) and three actions a Television object should be able to do (e.g., turn volume up )
+
+instance variables: channelList, currentChannel, volumeLevel
+actions: volumeUp, volumeDown, channelUp, channelDown
 
 5. Consider the following class program, what will it output?
 
@@ -41,15 +44,20 @@ class Kanga:
         return self.n
 
 def main():
-    kanga1 = Kanga( 2 )
+    kanga1 = Kanga( 2 ) # kanga1.n = 3
     kanga2 = kanga1
-    roober = kanga2.roo( 4 )
+    roober = kanga2.roo( 4 ) # print -> 7, roober = 8
 
-    kanga1.setN( roober )
-    kanga2.roo( 4 )
-    kanga1.roo( 4 )
+    kanga1.setN( roober ) # (kanga1 = kanga2).n = 8
+    kanga2.roo( 4 ) # print -> 12
+    kanga1.roo( 4 ) # print -> 12
 
 main()
+
+OUTPUT:
+7
+12
+12
 
 6. Write a class to represent spheres. Your class should implement the following methods (Hint: Equations for spheres = (LaTeX: V\:=\:\frac{4}{3}\Pi r^3\:\:\:A\:=\:4\Pi r^2 V = 4 3 Π r 3 A = 4 Π r 2 ):
 
@@ -60,6 +68,21 @@ getRadius( self )
 surfaceArea( self )
 
 volume( self )
+
+A.
+
+class sphere:
+    def __init__( self, r ):
+        self.r = r
+
+    def getRadius( self ):
+        return self.r
+
+    def surfaceArea( self ):
+        return (self.r**2) * 4 * Math.PI
+
+    def volume( self ):
+        return (self.r**3) * (4/3) * Math.PI
 
 7. Write a class named Email that should have four instance variables: sender (a String of the sender's email address), recipient (A String of the receiver's email address), priority (a value from 1 to 3, with three 3 indicating highest priority), and message (the text of the email). The Email class should also include a method to print the message out called printOut. Then create an instance of your Email class and call the printOut function on it to verify it prints as you expect. For example, given this object:
 
@@ -76,9 +99,21 @@ FROM: sender@them.com
 Priority: 3
 Who is Keyser Soze?
 
+A.
+
+class sphere:
+    def __init__( self, sender, recipient, priority, message):
+        self.fields = sender, recipient, priority, message
+
+    def printOut( self ):
+        print("TO: ", self.fields[1])
+        print("FROM: ", self.fields[0])
+        print("Priority: ", self.fields[2])
+        print(self.fields[3])
+
 6.3 Data Processing with Classes
 
-1. When a variable stores no value or no reference to an object, then its value is ____________ .
+1. When a variable stores no value or no reference to an object, then its value is _ None _ .
 
 2. What happens when we attempt to access a property or method on a variable that is storing the value `None`?
 
