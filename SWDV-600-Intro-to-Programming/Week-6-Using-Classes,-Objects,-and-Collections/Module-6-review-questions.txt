@@ -119,6 +119,28 @@ class sphere:
 
 3. Using the candy-data.txtPreview the document file, write a program that finds the chocolate candy with the lowest sugar percentile. Your program should parse each line of the file into a Candy object. Feel free to build your program from the candy_processor.pyPreview the document completed in the video.
 
+import candy_processor as cProc
+
+def main():
+
+    candyDataFile = open("candy-data.txt", "r")
+
+    lowestSugPerChocCandy = None
+
+    for line in candyDataFile:
+        candyData = parseCandyDataFromLine( line.strip() )
+        if candyData.getIsChocolate():
+            if lowestSugPerChocCandy is None:
+               lowestSugPerChocCandy = candyData
+            else:
+               lowestSugPerChocCandy = candyData if candyData.getSugarPercentile() <= lowestSugPerChocCandy.getSugarPercentile() else lowestSugPerChocCandy
+
+    print( lowestSugPerChocCandy.getName() )
+    print( lowestSugPerChocCandy.getSugarPercentile() )
+    candyDataFile.close()
+
+main()
+
 4. Feel free to watch the Joy of Painting below. https://youtu.be/kasGRkfkiPM
 
 Ross, B. (2015, March 20). Bob Ross - Mountain Summit (Season 13 Episode 10) [Video file]. Retrieved from Bob Ross - Mountain Summit (Season 13 Episode 10). (Links to an external site.)

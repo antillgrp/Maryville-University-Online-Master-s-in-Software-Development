@@ -1,0 +1,12 @@
+How many hours do you estimate you used completing this assignment?
+
+unique_list.py -> 2 h
+vending_status_checker.py -> 6h
+
+What was easiest for you when completing this assignment?
+
+unique_list.py
+
+What was the most difficult challenge you experienced when completing this assignment?
+
+The complexity of the math of MachineStatus for vending_status_checker.py

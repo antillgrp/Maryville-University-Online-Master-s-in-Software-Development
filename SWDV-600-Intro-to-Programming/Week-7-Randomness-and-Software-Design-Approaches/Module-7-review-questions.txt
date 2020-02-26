@@ -1,0 +1,108 @@
+Module 7 review questions
+
+7.0 Introduction to Simulation and Design
+
+7.1 Randomness
+
+1. What is the minimum value that could be returned by a random.random() call?
+
+2. What is the maximum value that could be returned by a random.random() call?
+
+3. What are all possible values that that could be returned by the call random.randrange(5, 10)?
+
+4. Write a program that can print out three different statements, but chooses which one to output randomly. Each time the program is run, it should generate a random floating point number. If the number is less than .35 it should print out one statement, greater than .65 then another statement, and if between .35 and .65 a third, different statement. The statements it prints out are entirely up to you.
+
+5. Write a program that will repeatedly generate a random number from 1 to 100 until it chooses a number that is divisible by 10 (hint: modulo!). The program should print out each number it generates including the final one that is divisible 10. For example:
+
+I generate numbers from 1 to 100 until I pick one divisible by 10.
+Here I go!
+78
+23
+83
+26
+90
+I'm done!
+
+7.2 Scaling and Transforming Random Numbers
+
+1. For the following expressions, what are the minimum and maximum values the expressions could evaluate to?
+
+    random.random() + 3.0
+
+    2 * random.random() + 10.0
+
+    (random.random() + 5) * 3
+
+2. For the following expressions, what are all possible values the expressions could evaluate to?
+
+    random.randrange( 85, 90 )
+
+    random.randrange( 0, 6 ) + 5
+
+    3 * random.randrange( 10, 16 )
+
+    random.randrange( 30, 46, 3 )
+
+3. A professor needs random movie ratings for an assignment. The ratings are given as percentages and should range from 30 to 100 but always be even integers. Write a program to generate 10 random movie ratings.
+
+4. You are testing a new machine learning prediction algorithm. The algorithm takes two floating point values as inputs and then makes a binary prediction: True or False. You are to write a program that produces a test data file for the algorithm. Your program should write a file with 30 lines each containing two random numbers separated by a comma. The first random number should be a floating point value between 12.0 and 13.0, the second random number should be a floating point value between 15.0 and 20.0. Your file contents might look like this:
+
+12.9385098192, 17.4441652461
+12.1117861524, 19.5109813671
+...
+
+5. Many mobile games contain loot boxes where players receive a virtual box they can open with random items inside. Occasionally these boxes can contain special bonus items. When opening a loot box, assume the game gives a special bonus item 3% of the time. Write a function simulating getting a bonus item when opening a box by having it return True 3% of the time False 97% of the time. 
+
+7.3 Racquetball Sim Specification
+
+1. A racquetball player can only score a point when they are the ______________ .
+
+2. If a player fails to return a ball after they have served, then the other player will become the ______________.
+
+3. A player must score ______________ points to win a game.
+
+4. The ______________ player always serves first.
+
+7.4 Top-down Design
+
+1. When we specify a function's parameters and return value, if any, we are designing the function's ______________ .
+
+2. Gradually filling in the implementation of functions from a top-level to a bottom-level is called ______________ ______________.
+
+3. Consider a program that accepts two files that list usernames. The program should find all user names that exist in both files and write the file names that exist in both to a new file. From a top-level design perspective, write a main function, and only the main function, that would be the beginning of a design to solve this problem. You should be considering the interfaces of your functions (i.e., their parameters and return values) such that if the functions were implemented then data would flow appropriately between the function calls to solve the problem.
+
+7.5 Bottom-up Design
+
+1. One way designing from the bottom-up is beneficial by enabling regular ______________ of smaller, individual units.
+
+2. Consider the function
+
+def stringDifference( s1, s2 ):
+
+which is intended to return the absolute difference in length between the Strings s1 and s2. Design a suite of test cases (i.e., input arguments and expected return values) that would effectively show this function is working correctly.
+
+3. Implement the stringDifference function as described previously and test it with your test cases to validate that it works as specified.
+
+4. Consider the function
+
+def intersection( s1, s2 ):
+
+which is intended to return a String of all the characters that are present in both the Strings s1 and s2. The returned string should only have each shared character appear one time (i.e., if the character 'a' appears multiple times in s1 and s2, it should only appear one time in the String that is returned). Design a suite of test cases (i.e., input arguments and expected return values) that would effectively show this function is working correctly.
+
+5. Implement the intersection function as described previously and test it with your test cases to validate that it works as specified.
+
+Looking for a further demonstration of the Bottom-up Design strategy? This week's Together Project takes a bottom-up design approach to developing the Shape Painter program.
+
+7.6 Spiral Model Design
+
+1. When using the spiral model, we are gradually __________ a very specific solution to a larger problem.
+
+2. A year is a leap year if it is divisible by 4, unless it is a century year that is not divisible by 400. For example, 1800 and 1900 are not leap years, while 1600 and 2000 are. Write a function named isLeapYear with a single parameter for the year that returns True if the year argument is a leap year and false otherwise. Consider approaching this in a spiral fashion by proceeding in this progression
+
+    Have the function return true for any year argument divisible by 4, ignoring the century year condition
+    Expand the cases of the function to now return false if the year is any century year
+    Expand the cases of the function to now return true if the year is a century year that is divisible by 400
+
+Remember, approach this in a spiral fashion: make it work for the easy cases given first,  then when it does expand it out to the next level of complexity.
+
+
