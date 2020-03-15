@@ -1,0 +1,362 @@
+
+Welcome to the text adventure game The Oblemur's Mansion.
+
+
+By what name shalt thou be called?
+> Hero
+Be welcome Hero
+
+
+
+- The goal is to find a treasure and take it out of the Mansion.
+- Command are shown in <>s but are used with out them. Ex. <help> will be written as: > help
+- Any time you get lost or don't know what to do find clues with the <help> command.
+- Also you can do <help command>, it tells you what <command> does
+- Enjoy and good look. The light be with you.
+
+
+
+Hero: your current location is: the garden
+> help
+Hero: your current location is: the garden
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <open an oak door>
+
+Hero: your current location is: the garden
+> open an oak door
+((an oak door)) has been successfully opened.
+
+Hero: your current location is: the garden
+> go North
+You just walked to the lobby
+
+Hero: your current location is: the lobby
+> grab an ax 
+((an ax)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the lobby
+> go East
+You just walked to the living room
+
+Hero: your current location is: the living room
+> grab a vase
+((a vase)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the living room
+> grab an oil lamp
+((an oil lamp)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the living room
+> go East
+You just walked to the library
+
+Hero: your current location is: the library
+> help
+Hero: your current location is: the library
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go West>, <talk-to a majordomo>
+Hero: now you can type: <break a bookshelf>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <give an ax to a majordomo>, <kill a majordomo>
+
+Hero: your current location is: the library
+> talk-to a majordomo
+a majordomo says: I've been living for 300 years in this mansion. I know all it's secrets.
+But all I wish I have now is one more wine sip. Then I might share some.
+
+Hero: your current location is: the library
+> go West
+You just walked to the living room
+
+Hero: your current location is: the living room
+> go West
+You just walked to the lobby
+
+Hero: your current location is: the lobby
+> go North
+You just walked to the inner courtyard
+
+Hero: your current location is: the inner courtyard
+> grab water
+((water)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the inner courtyard
+> help
+Hero: your current location is: the inner courtyard
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go South>, <open a red door>
+Hero: now you can type: <break a fountain>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>
+
+Hero: your current location is: the inner courtyard
+> open a red door
+((a red door)) has been successfully opened.
+
+Hero: your current location is: the inner courtyard
+> go East
+You just walked to the red room
+
+Hero: your current location is: the red room
+> help
+Hero: your current location is: the red room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go West>, <grab a bottle of wine>, <open an iron door>
+Hero: now you can type: <break a bottle of wine>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>
+
+Hero: your current location is: the red room
+> grab a bottle of wine
+((a bottle of wine)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the red room
+> go West
+You just walked to the inner courtyard
+
+Hero: your current location is: the inner courtyard
+> go South
+You just walked to the lobby
+
+Hero: your current location is: the lobby
+> go South
+You just walked to the garden
+
+Hero: your current location is: the garden
+> go North
+You just walked to the lobby
+
+Hero: your current location is: the lobby
+> go East
+You just walked to the living room
+
+Hero: your current location is: the living room
+> go East
+You just walked to the library
+
+Hero: your current location is: the library
+> help
+Hero: your current location is: the library
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go West>, <talk-to a majordomo>
+Hero: now you can type: <break a bookshelf>, <drop a bottle of wine>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>, <give a bottle of wine to a majordomo>, <give an ax to a majordomo>, <kill a majordomo>
+
+Hero: your current location is: the library
+> give a bottle of wine to a majordomo
+a bottle of wine has been dropped in the library.
+a majordomo says: Thanks a lot for giving me a bottle of wine. I'll help you find what you came for.
+Go find the red room and you will find in there a clue of what you're looking for.
+The light be with you.
+
+Hero: your current location is: the library
+> go West
+You just walked to the living room
+
+Hero: your current location is: the living room
+> go West
+You just walked to the lobby
+
+Hero: your current location is: the lobby
+> go North
+You just walked to the inner courtyard
+
+Hero: your current location is: the inner courtyard
+> go East
+You just walked to the red room
+
+Hero: your current location is: the red room
+> go North
+You just walked to the hidden room
+
+Hero: your current location is: the hidden room
+> help
+Hero: your current location is: the hidden room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go South>, <grab a sorcery book>
+Hero: now you can type: <break a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>
+
+Hero: your current location is: the hidden room
+> grab a sorcery boo
+Your instruction hasn't been recognized or couldn't be executed, please try <help> or something else.
+
+Hero: your current location is: the hidden room
+> grab a sorcery book
+((a sorcery book)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the hidden room
+> go South
+You just walked to the red room
+
+Hero: your current location is: the red room
+> help
+Hero: your current location is: the red room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>, <go West>, <open an iron door>
+Hero: now you can type: <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>, <open a sorcery book>
+
+Hero: your current location is: the red room
+> open an iron door
+((an iron door)) has been successfully opened.
+
+Hero: your current location is: the red room
+> help
+Hero: your current location is: the red room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go East>, <go North>, <go West>
+Hero: now you can type: <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>, <open a sorcery book>
+
+Hero: your current location is: the red room
+> go East
+You just walked to the sorcery room
+
+Hero: your current location is: the sorcery room
+> help
+Hero: your current location is: the sorcery room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>, <go West>, <open an iron chest>
+Hero: now you can type: <break a daemon statue>, <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>, <kill a fire>, <open a sorcery book>
+
+Hero: your current location is: the sorcery room
+> kill a fire
+a fire has been killed/extinguished successfully, do <help> or <look>
+
+Hero: your current location is: the sorcery room
+> look
+Hero: your current location is: the sorcery room
+Here you can see:
+((an iron door)): A black iron door.
+((a daemon statue)): A replica of the daemon figure seen earlier on the fountain.
+((an iron chest)): A heavy iron chest locked with an stone lock with an engraving of a daemon face, totally dusty except for a rectangle of the size of a book free of dust.
+
+Hero: your current location is: the sorcery room
+> go North
+You just walked to the fireplace
+
+Hero: your current location is: the fireplace
+> help
+Hero: your current location is: the fireplace
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go South>, <grab an stone key>
+Hero: now you can type: <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop water>, <open a sorcery book>
+
+Hero: your current location is: the fireplace
+> grab an stone key
+((an stone key)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the fireplace
+> inventory
+((an ax)): Just an ax to brake things or kill persons
+((a vase)): A vase that can be filled out with water and pour water over other object
+((an oil lamp)): A lamp to light up when is too dark.
+((water)): Water that can be taken with a proper container.
+((a sorcery book)): The most terrifying book ever seen. A bookmark is sticking out in a page with a big bold message of assorted words.
+((an stone key)): An stone key with an engraving of the (fountain and statue) daemon's face.
+
+Hero: your current location is: the fireplace
+> help
+Hero: your current location is: the fireplace
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go South>
+Hero: now you can type: <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop an stone key>, <drop water>, <open a sorcery book>
+
+Hero: your current location is: the fireplace
+> go South
+You just walked to the sorcery room
+
+Hero: your current location is: the sorcery room
+> help
+Hero: your current location is: the sorcery room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>, <go West>, <open an iron chest>
+Hero: now you can type: <break a daemon statue>, <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop an stone key>, <drop water>, <open a sorcery book>, <unlock an iron chest>
+
+Hero: your current location is: the sorcery room
+> unlock an iron chest
+an iron chest has been successfully unlocked, do <help> for more options.
+
+Hero: your current location is: the sorcery room
+> help
+Hero: your current location is: the sorcery room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>, <go West>, <open an iron chest>
+Hero: now you can type: <break a daemon statue>, <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop an stone key>, <drop water>, <open a sorcery book>
+
+Hero: your current location is: the sorcery room
+> open an iron chest
+((an iron chest)) has been successfully opened.
+Suddenly, the black iron door behind you got close and locked. UUHHHmmm this is not good!
+
+Also, see the hugest red sapphire seem ever inside the chest, you've finally found it !!
+
+Hero: your current location is: the sorcery room
+> help
+Hero: your current location is: the sorcery room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>, <grab a treasure>, <open an iron door>
+Hero: now you can type: <break a daemon statue>, <break a treasure>, <drop a sorcery book>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop an stone key>, <drop water>, <open a sorcery book>, <unlock an iron door>
+
+Hero: your current location is: the sorcery room
+> grab a treasure
+((a treasure)) has been successfully moved to your inventory, do <inventory>
+
+Hero: your current location is: the sorcery room
+> open an iron door            <-------------------------------- IRON DOOR GOT LOCKED SHOULD NOT OPEN (FIXED)
+((an iron door)) has been successfully opened.
+
+Hero: your current location is: the sorcery room
+> help
+Hero: your current location is: the sorcery room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>, <go West>
+Hero: now you can type: <break a daemon statue>, <drop a sorcery book>, <drop a treasure>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop an stone key>, <drop water>, <open a sorcery book>, <unlock an iron door>
+
+Hero: your current location is: the sorcery room
+> open a sorcery book
+((a sorcery book)) has been successfully opened.
+Magic!!, a secret passage has got open, you now have a way out, do <help> to see how.
+
+Hero: your current location is: the sorcery room
+> help
+Hero: your current location is: the sorcery room
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>, <go South>, <go West>
+Hero: now you can type: <break a daemon statue>, <drop a sorcery book>, <drop a treasure>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop an stone key>, <drop water>, <open a sorcery book>, <unlock an iron door>
+
+Hero: your current location is: the sorcery room
+> go South
+You just walked to the library
+
+Hero: your current location is: the library
+> go West
+You just walked to the living room
+
+Hero: your current location is: the living room
+> go West
+You just walked to the lobby
+
+Hero: your current location is: the lobby
+> go South
+You just walked to the garden
+
+Hero: your current location is: the garden
+> help
+Hero: your current location is: the garden
+Hero: now you can type: <help>, <inventory>, <look>
+Hero: now you can type: <go North>
+Hero: now you can type: <break an oak door>, <drop a sorcery book>, <drop a treasure>, <drop a vase>, <drop an ax>, <drop an oil lamp>, <drop an stone key>, <drop water>, <open a sorcery book>
+
+Hero: your current location is: the garden
+> inventory
+((an ax)): Just an ax to brake things or kill persons
+((a vase)): A vase that can be filled out with water and pour water over other object
+((an oil lamp)): A lamp to light up when is too dark.
+((water)): Water that can be taken with a proper container.
+((a sorcery book)): The most terrifying book ever seen. A bookmark is sticking out in a page with a big bold message of assorted words.
+((an stone key)): An stone key with an engraving of the (fountain and statue) daemon's face.
+((a treasure)): The hugest red sapphire seem ever.
+
+Hero: your current location is: the garden
+> go North
+You just walked to the lobby
+
+Hero: your current location is: the lobby
+> go North                                       <------ IS GO SOUTH (FIXED)
+You just walked to the inner courtyard
+Congratulations you Won
+You made it out with the treasure.
+
+Process finished with exit code 0

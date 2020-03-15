@@ -1,0 +1,12 @@
+How many hours do you estimate you used completing this assignment?
+
+roll_until_sum.py -> 1 h
+random_shapes.py -> 2 - 3 h
+
+What was easiest for you when completing this assignment?
+
+roll_until_sum.py
+
+What was the most difficult challenge you experienced when completing this assignment?
+
+Find a way to make sure the circles were going to fully fit inside the windows.

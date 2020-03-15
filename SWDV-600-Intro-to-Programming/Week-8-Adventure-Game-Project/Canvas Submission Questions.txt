@@ -1,0 +1,15 @@
+How many hours do you estimate you used completing this assignment?
+
+4 days 8-10 h each
+
+What was easiest for you when completing this assignment?
+
+Using all the structures and sintaxys I learnt during the course
+
+What was the most difficult challenge you experienced when completing this assignment?
+
+Design and take the design to code
+
+Are there any specific features or efforts you feel should be reviewed for possible extra credit?
+
+1st It Works, 2nd it is creative, 3erd It uses JSON compatible data structures 
