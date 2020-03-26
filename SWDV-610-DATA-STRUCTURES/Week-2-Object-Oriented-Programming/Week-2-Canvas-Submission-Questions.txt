@@ -1,0 +1,12 @@
+1 How many hours do you estimate you used completing this assignment?
+
+8 h
+
+2 What was easiest for you when completing this assignment?
+
+Finding examples of  life-critical applications.
+
+3 What was the most difficult challenge you experienced when completing this assignment?
+
+
+Designing  a class UML diagram for a new e-book reader application.
