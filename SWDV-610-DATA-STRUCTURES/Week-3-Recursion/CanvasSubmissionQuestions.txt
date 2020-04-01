@@ -1,0 +1,11 @@
+1 How many hours do you estimate you used completing this assignment?
+
+4 - 5 h
+
+2 What was easiest for you when completing this assignment?
+
+a recursive function to reverse a list
+
+3 What was the most difficult challenge you experienced when completing this assignment?
+
+Deal with the output of a recursive function that returns a tuple
