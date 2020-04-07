@@ -1,0 +1,11 @@
+1 How many hours do you estimate you used completing this assignment?
+
+4 h
+
+2 What was easiest for you when completing this assignment?
+
+Implementing Stack and Queue
+
+3 What was the most difficult challenge you experienced when completing this assignment?
+
+Implementing Deque and integrate linked list into other linear data structures
