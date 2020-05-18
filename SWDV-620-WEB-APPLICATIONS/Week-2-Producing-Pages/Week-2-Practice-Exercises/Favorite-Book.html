@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Favorite Book</title>
+<meta charset="UTF-8">
+<body>
+  <div >
+    <TABLE BORDER="5" WIDTH="50%" CELLPADDING="2" CELLSPACING="3">
+      <TR>
+        <TH COLSPAN="4">
+          <H3>A Song of Ice and Fire</H3>
+        </TH>
+      </TR>
+      <TR>
+        <TH>Title</TH>
+        <TH>Author</TH>
+        <TH>Year</TH>
+        <TH>Links</TH>
+      </TR>
+      <TR ALIGN="CENTER">
+        <TD>A Game of Thrones</TD>
+        <TD>George R. R. Martin</TD>
+        <TD>1996</TD>
+        <TD>
+          <ul>
+            <li><i><a href="/wiki/A_Game_of_Thrones" title="A Game of Thrones">A Game of Thrones</a></i></li>
+          </ul>
+        </TD>
+      </TR>
+      <TR ALIGN="CENTER">
+        <TD>A Clash of Kings</TD>
+        <TD>George R. R. Martin</TD>
+        <TD>1998</TD>
+        <TD>
+          <ul>
+            <li><i><a href="/wiki/A_Clash_of_Kings" title="A Clash of Kings">A Clash of Kings</a></i></li>
+          </ul>
+        </TD>
+      </TR>
+      <TR ALIGN="CENTER">
+        <TD>A Storm of Swords</TD>
+        <TD>George R. R. Martin</TD>
+        <TD>2000</TD>
+        <TD>
+          <ul>
+            <li><i><a href="/wiki/A_Storm_of_Swords" title="A Storm of Swords">A Storm of Swords</a></i></li>
+          </ul>
+        </TD>
+      </TR>
+      <TR ALIGN="CENTER">
+        <TD>A Feast for Crows</TD>
+        <TD>George R. R. Martin</TD>
+        <TD>2005</TD>
+        <TD>
+          <ul>
+            <li><i><a href="/wiki/A_Feast_for_Crows" title="A Feast for Crows">A Feast for Crows</a></i></li>
+          </ul>
+        </TD>
+      </TR>
+      <TR ALIGN="CENTER">
+        <TD>A Dance with Dragons</TD>
+        <TD>George R. R. Martin</TD>
+        <TD>2011</TD>
+        <TD>
+          <ul>
+            <li><i><a href="/wiki/A_Dance_with_Dragons" title="A Dance with Dragons">A Dance with Dragons</a></i></li>
+          </ul>
+        </TD>
+      </TR>
+      <TR>
+        <TH COLSPAN="4">
+          <form action="/submit.php" method="post">
+            <fieldset>
+              <legend>ADD COMMENT...</legend>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" cols="10" required="required">
+              <br>
+              <label for="pwd">Password:</label>
+              <input type="password" id="pwd" name="pwd" cols="10" required="required">
+              <br>
+              <label for="comment">Comment:</label><br>
+              <textarea id="comment" name="comment" rows="4" cols="80" wrap="off">
+Notes on POST:
+* Appends form-data inside the body of the HTTP request (data is not shown in URL)
+* Has no size limitations
+* Form submissions with POST cannot be bookmarked
+                  </textarea>
+            </fieldset>
+            <input type="submit" value="Submit" style="float: left">
+            <input type="reset"  value="Clear" style="float: right">
+          </form>
+        </TH>
+      </TR>
+    </TABLE>
+  </div>
+</body>
+</html>
